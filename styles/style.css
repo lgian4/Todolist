@@ -1,0 +1,220 @@
+ @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+        src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        /*
+        url(MaterialIcons-Regular.woff2) format('woff2'),
+        url(MaterialIcons-Regular.woff) format('woff'),
+        */
+        url(MaterialIcons-Regular.ttf) format('truetype');
+}
+#contact-button {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+}
+.site-header {
+  position: relative;
+}
+
+.site-header .mdl-layout__header-row {
+  padding: 0;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.site-description {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.is-compact .mdl-layout__title span {
+  display: none;
+}
+
+.site-logo-row {
+  min-height: 200px;
+}
+
+.is-compact .site-logo-row {
+  min-height: auto;
+}
+
+.site-logo {
+  background: url(../img/site-logo.png) 50% no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  margin: 15px auto;
+}
+
+.is-compact .site-logo {
+  height: 50px;
+  width: 50px;
+  margin: 7px auto;
+}
+
+.site-navigation-row {
+  background-color: rgba(0, 0, 0, 0.08);
+  text-transform: uppercase;
+  height: 45px;
+}
+
+.site-navigation-row .mdl-navigation {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.site-navigation-row .mdl-navigation__link {
+  -ms-flex: 1;
+  flex: 1;
+  line-height: 42px;
+  color: #fff;
+}
+
+.site-navigation-row .is-active {
+  position: relative;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.site-navigation-row .mdl-navigation__link:hover {
+  opacity: 1;
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+  color: #fff;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+.material-icons.md-pink { color: #ff4081; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+.task .task-card{
+	background :  #ffc107;
+	color: white;
+}
+.task-card .mdl-card__title-text, .task-card .mdl-card__supporting-text, .task-card .mdl-card__actions{
+    color: #fff;
+}
+.task .urgent-card{
+	background : #c2185b;
+	color: white;
+}
+.urgent-card .mdl-card__title-text, .urgent-card .mdl-card__supporting-text, .urgent-card .mdl-card__actions{
+    color: #fff;
+}
+.complete .task-card {
+	background : #9e9e9e;
+	color: white;
+	text-decoration: line-through;
+}
+.mdl-tooltip {
+	z-index: 99;
+}
+/*.complete .task-card a, .complete .urgent-card a {
+	background : white;
+	color: white;
+	text-decoration: none;
+}*/
+.task-card .mdl-card__title-text, .task-card .mdl-card__supporting-text, .task-card .mdl-card__actions{
+    color: #fff;
+}
+.complete .urgent-card{
+	background : #424242;
+	color: white;
+	text-decoration: line-through;
+
+}
+.urgent-card .mdl-card__title-text, .urgent-card .mdl-card__supporting-text, .urgent-card .mdl-card__actions{
+    color: #fff;
+}
+ .complete .mdl-button{
+	position: absolute;
+	left: 80%;
+	
+	background-color: white;
+}
+.task .mdl-button{
+	color: white;
+}
+.task .urgent-card,.task .task-card{
+	min-height: 80px;
+}
+.complete .urgent-card,.complete .task-card{
+	min-height: 50px;
+	margin:  5px;
+	padding: 4px;
+
+}
+.mdl-card__supporting-text,.mdl-card__title{
+	padding: 5px 10px;
+}
+#add-dialog, #update-dialog{
+	background-color: #ffc107;
+	min-height:30%;
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	z-index: 10;
+}
+#add-dialog input,#add-dialog textarea,#add-dialog label, #update-dialog input,#update-dialog textarea,#update-dialog label{
+	color:black;
+
+}
+.mdl-layout__header{
+	background-color: #263238;
+}

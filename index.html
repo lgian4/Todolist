@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material To Do</title>
+    <meta name="description" content="To do app."/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en" rel="stylesheet">
+    
+    <link href="dist/material/material.min.css" rel="stylesheet">
+    <style type="text/css">
+     
+    </style>
+   
+    <link href="styles/style.css" rel="stylesheet">
+
+  </head>
+  <body id="top">
+
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--4dp urgent-card todo portfolio-card" id="add-dialog">  
+    <div class="mdl-card__title mdl-typography--title-color-contrast">
+   <i class="material-icons md-dark">create</i> ADD NEW TASK
+</div>
+    <div class="mdl-card__supporting-text">    
+          
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <input class="mdl-textfield__input" type="text" id="title"> <label class="mdl-textfield__label" for="title">Title</label>
+
+</div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <textarea class="mdl-textfield__input" type="text" id="description"></textarea> <label class="mdl-textfield__label" for="description">Description</label>
+
+</div>
+<div id='add-urgent-refresh'>
+<label for="urgent" class="mdl-switch mdl-js-switch "> <input type="checkbox" id="urgent" class="mdl-switch__input" > <span class="mdl-switch__label">Urgent</span> </label>
+
+</div>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent add-save" href="#"><i class="material-icons md-dark">save</i>
+          
+          </a>
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent add-close" href="#">
+          <i class="material-icons md-dark">cancel</i>
+          </a>
+        </div>
+  </div>
+   <dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title">Delete All Complete Task?</h4>
+    <div class="mdl-dialog__content">
+      <p>
+        Are you want to delete all the complete task?
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button delete-all">Delete</button>
+      <button type="button" class="mdl-button close">Close</button>
+    </div>
+  </dialog>
+  <!-- update -->
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--4dp urgent-card todo portfolio-card" id="update-dialog">  
+    <div class="mdl-card__title mdl-typography--title-color-contrast">
+    UPDATE TASK
+</div>
+    <div class="mdl-card__supporting-text">    
+<div class="mdl-textfield mdl-js-textfield"> <input class="mdl-textfield__input" type="text" id="update-id" disabled="true"> <label class="mdl-textfield__label" for="update-id"></label>
+
+</div>       
+ <div class="mdl-textfield mdl-js-textfield">  <label class="mdl-textfield__label" for="update-title"></label>
+<input class="mdl-textfield__input" type="text" id="update-title">
+</div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <textarea class="mdl-textfield__input" type="text" id="update-description"></textarea> <label class="mdl-textfield__label" for="update-description"></label>
+
+</div>
+<label for="update-urgent" class="mdl-switch mdl-js-switch mdl-js-ripple-effect"> <input type="checkbox" id="update-urgent" class="mdl-switch__input"> <span class="mdl-switch__label">Urgent</span> </label>
+<label for="update-status" class="mdl-switch mdl-js-switch mdl-js-ripple-effect"> <input type="checkbox" id="update-status" class="mdl-switch__input"> <span class="mdl-switch__label">Completed</span> </label>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent update-save" href="#">
+          Update
+          </a>
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent update-close" href="#">
+          Cancel
+          </a>
+        </div>
+  </div>
+
+
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <a href="#" id="contact-button" class="add-button mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp"><i class="material-icons md-light">add</i></a>
+      <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
+        <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
+            <div class="site-logo"></div><span class="site-description">Material To Do</span></span></div>
+        <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
+         
+        </div>
+      </header>
+      <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+        <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"><a class="mdl-navigation__link" href="index.html">Home</a><a class="mdl-navigation__link add-button" data-role="button">New Task</a><a class="mdl-navigation__link" href="#options" data-role="button">Options</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="site-content">
+          <div class="container" id="home" data-role="page">
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">TASK</h2>
+        </div>
+        <div id="task" class="mdl-card__supporting-text task">
+            
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a id='complete-all' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent complete-all" href="#"><i class="material-icons md-pink">done_all</i>
+           Complete All
+          </a>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text" data-role="listview">Completed</h2>
+        </div>
+        <div id="complete" class="mdl-card__supporting-text complete mdl-grid">
+           
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent delete-all-button" href="#"><i class="material-icons md-pink">delete_forever</i>
+           Delete All
+          </a>
+        </div>
+    </div>
+    
+ 
+</div>
+        </div>
+       
+      </main>
+      <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button type="button" class="mdl-snackbar__action"></button>
+      </div>
+      <script src="dist/jquery/jquery-3.1.1.min.js"></script>
+      <script src="dist/material/material.js" ></script>
+ <script> 
+
+     // $("#update-dialog").hide();
+      $("#add-dialog").hide();
+      $("#update-dialog").hide();
+      $(".add-button").click(function(){
+        $("#add-dialog").fadeIn('fast');
+        $("#add-dialog #title").val('').focus();
+        $("#add-dialog #description").val('');
+      });//add button
+      $('.add-close').click(function(){
+        $("#add-dialog").fadeOut("fast");  
+      });//hide
+      $('.update-close').click(function(){
+        $("#update-dialog").fadeOut("fast");  
+      });//hide
+       $('.add-save').click(function(){
+        $("#add-dialog").fadeOut('fast');   
+      });
+
+       var dialog = document.querySelector('dialog');
+if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+
+      $('.delete-all-button').click(function(){
+ dialog.showModal();
+      });
+      $('dialog .close').click(function(){
+        dialog.close();
+      });
+    
+      //hide
+    // var dialog = document.querySelector('dialog'); 
+    // var showModalButton = document.querySelector('.showModal'); 
+    // if (! dialog.showModal) { 
+    //   dialogPolyfill.registerDialog(dialog); 
+    // } 
+    // showModalButton.addEventListener('click', function() { 
+    //   dialog.showModal(); 
+    // }); 
+    // dialog.querySelector('.close').addEventListener('click', function() { 
+    //   dialog.close();
+    // }); 
+    </script>
+      <script src="scripts/app.js" ></script>
+
+    </div>
+  </body>
+</html>
